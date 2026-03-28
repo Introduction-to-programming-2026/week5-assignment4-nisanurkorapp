@@ -7,10 +7,7 @@
 int main(void)
 {
     int n = 50;
+    int *p = &n;
 
-    // TODO: Declare a pointer p that stores the address of n
-    int *p = /* ??? */;
-
-    // TODO: Print the address stored in p using %p
-    printf("%p\n", /* ??? */);
+    printf("%p\n", p);
 }
