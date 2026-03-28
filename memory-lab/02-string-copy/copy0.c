@@ -6,24 +6,21 @@
 // TODO: Write a comment below explaining WHY this happens:
 // ANSWER: ...
 
-#include <cs50.h>
-#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(void)
 {
-    // Get a string
-    string s = get_string("s: ");
+    char s[100];
+    printf("s: ");
+    scanf("%s", s);
 
-    // This does NOT copy the string!
-    // It only copies the address — s and t now point to the same memory.
-    string t = s;
+    char t[100];
+    strcpy(t, s);
 
-    // Capitalize first letter of t
     t[0] = toupper(t[0]);
 
-    // Print both — are they different?
     printf("s: %s\n", s);
     printf("t: %s\n", t);
 }
